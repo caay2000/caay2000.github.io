@@ -1,0 +1,15 @@
+---
+layout: default
+---
+	<section>
+		<ul class="post-list">
+			{% for post in site.posts limit: site.posts_main_page %}
+			<li>
+				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				<a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" class="disqus_comments">{{ post.title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<p><a href="{{ "/archive/" | prepend: site.baseurl }}">view more...</a></p>
+	</section>

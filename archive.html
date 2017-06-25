@@ -1,0 +1,14 @@
+---
+layout: default
+---
+	<section>
+		<ul class="post-list">
+			{% for post in site.posts %}
+			<li>
+				<time>{{ post.date | date: "%b %d, %Y" }}</time>
+				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				<a href="{{ post.url | prepend: site.baseurl }}#disqus_thread" class="disqus_comments">{{ post.title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>

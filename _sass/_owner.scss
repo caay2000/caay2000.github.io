@@ -1,0 +1,23 @@
+a.fa{
+    font-size: 200%;
+    color: #111;
+}
+a.fa.fa-twitter:hover{
+    color:#55ACEE;
+}
+a.fa.fa-linkedin:hover{
+    color:#007bb5;
+}
+section.menu{
+    overflow: auto;
+}
+span.menu{
+    float:left;
+}
+span.social-media{
+    float:right;
+}
+.disqus_comments{
+    color: $text-color;
+    font-size: $small-font-size;
+}

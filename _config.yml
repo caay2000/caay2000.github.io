@@ -1,0 +1,27 @@
+title: CAAY2000 Tech Blog
+# email: your-email@example.com
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: "https://caay2000.github.io"
+
+twitter_username: caay2000x
+github_username:  caay2000
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+
+sass:
+  style: compressed
+
+google_analytics: UA-9486467-17
+disqus_shortname: caay2000-blog
+
+posts_main_page: 9
+
+
