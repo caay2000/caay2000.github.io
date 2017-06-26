@@ -53,9 +53,13 @@ This AopUtils match the generic params perfectly with the method you are searchi
 @Around("execution(* *.doSomething(..))")
 public void aspect(ProceedingJoinPoint joinPoint) throws Throwable {
 
-    Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();
-    Assertion.result = AopUtils.getMostSpecificMethod(method, joinPoint.getTarget().getClass()).getAnnotation(FooAnnotation.class).value();
-    joinPoint.proceed();
+        Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();
+        Class<?> targetClass = joinPoint.getTarget().getClass();
+
+        Method specificMethod = AopUtils.getMostSpecificMethod(method, targetClass);
+        Assertion.result = specificMethod.getAnnotation(FooAnnotation.class).value();
+
+        joinPoint.proceed();
 }
 ```
 
