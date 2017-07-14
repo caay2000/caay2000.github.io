@@ -7,7 +7,7 @@ layout: default
 			<li>
 				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
 				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-				<a href="/2017/06/23/set-up#disqus_thread" class="disqus_comments">&nbsp;</a>
+				<a href="{{ post.url | prepend: site.baseurl }}/#disqus_thread" class="disqus_comments">&nbsp;</a>
 
 			</li>
 			{% endfor %}
